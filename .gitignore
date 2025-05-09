@@ -73,3 +73,20 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# Documentation or export folders
+/[Dd]ocs/
+/[Rr]elease/
+/[Dd]eploy/
+
+# NuGet packages
+/NuGet/
+
+# Addressables or AssetBundles
+/[Aa]ssets/[Aa]ddressable[Aa]ssets/
+/[Aa]ssets/[Aa]sset[Bb]undles/
+
+.idea/
+*.iml
+*.iws
+.vscode/
