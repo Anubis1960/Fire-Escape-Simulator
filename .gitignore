@@ -90,3 +90,9 @@ crashlytics-build.properties
 *.iml
 *.iws
 .vscode/
+
+*/.idea/
+
+.vsconfig
+
+Logs
