@@ -7,16 +7,20 @@ public class Movement : MonoBehaviour
     public float walkSpeed = 2f;
     public float sprintSpeed = 4f;
     public float mouseSensitivity = 2f;
-    public float jumpHeight = 5f;
+    public float jumpHeight = 2.5f;
+    public bool IsSprinting { get; private set; }
+    public bool IsJumping {  get; private set; }
     
     private float _currentSpeed;
     private float _yRotation;
     private bool _isGrounded;
+    private PlayerDamage playerDamage;
     
     private Rigidbody _rigidbody;
 
     void Start()
     {
+        playerDamage = GetComponent<PlayerDamage>();
         _rigidbody = GetComponent<Rigidbody>();
         _currentSpeed = walkSpeed;
     }
@@ -57,11 +61,14 @@ public class Movement : MonoBehaviour
         {
             _rigidbody.AddForce(Vector3.up * jumpHeight, ForceMode.Impulse);
             _isGrounded = false;
+            
+            playerDamage.ReduceOxygen(5); // Oxygen loss on jumping
         }
     }
 
     void HandleSprint()
     {
+        IsSprinting = Input.GetKey(KeyCode.LeftShift);
         _currentSpeed = Input.GetKey(KeyCode.LeftShift) ? sprintSpeed : walkSpeed;
     }
 
