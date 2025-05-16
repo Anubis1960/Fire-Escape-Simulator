@@ -329,9 +329,9 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 100
   maxOxygen: 100
-  currentOxygen: 0
+  currentOxygen: 100
   healthBar: {fileID: 527982991}
-  oxygenBar: {fileID: 0}
+  oxygenBar: {fileID: 431649066}
 --- !u!114 &334865346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -348,6 +348,7 @@ MonoBehaviour:
   sprintSpeed: 4
   mouseSensitivity: 2
   jumpHeight: 5
+  playerCamera: {fileID: 0}
 --- !u!65 &334865347
 BoxCollider:
   m_ObjectHideFlags: 0
